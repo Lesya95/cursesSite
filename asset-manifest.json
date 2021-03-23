@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cursesSite/static/css/main.4a2aa742.chunk.css",
+    "main.js": "/cursesSite/static/js/main.ec469558.chunk.js",
+    "main.js.map": "/cursesSite/static/js/main.ec469558.chunk.js.map",
+    "runtime-main.js": "/cursesSite/static/js/runtime-main.c211361a.js",
+    "runtime-main.js.map": "/cursesSite/static/js/runtime-main.c211361a.js.map",
+    "static/js/2.754dd4ed.chunk.js": "/cursesSite/static/js/2.754dd4ed.chunk.js",
+    "static/js/2.754dd4ed.chunk.js.map": "/cursesSite/static/js/2.754dd4ed.chunk.js.map",
+    "static/js/3.5fa5ccd3.chunk.js": "/cursesSite/static/js/3.5fa5ccd3.chunk.js",
+    "static/js/3.5fa5ccd3.chunk.js.map": "/cursesSite/static/js/3.5fa5ccd3.chunk.js.map",
+    "index.html": "/cursesSite/index.html",
+    "static/css/main.4a2aa742.chunk.css.map": "/cursesSite/static/css/main.4a2aa742.chunk.css.map",
+    "static/js/2.754dd4ed.chunk.js.LICENSE.txt": "/cursesSite/static/js/2.754dd4ed.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c211361a.js",
+    "static/js/2.754dd4ed.chunk.js",
+    "static/css/main.4a2aa742.chunk.css",
+    "static/js/main.ec469558.chunk.js"
+  ]
+}
