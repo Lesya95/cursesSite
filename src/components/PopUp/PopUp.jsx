@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {closingPopUpAC, selectModuleAC} from "../../redux/course-reducer";
+import {closingPopUp, selectModule} from "../../redux/course-reducer";
 
 const PopUp = (props) => {
 
@@ -14,10 +14,8 @@ const PopUp = (props) => {
         })
 
         return <div className={props.isPopUp ? "pop-up active" : "pop-up"}>
-        <span onClick={() => {
-            props.closingPopUp()
-        }
-        } className={"icon"}> ✖ </span>
+        <span onClick={() => {props.closingPopUp()}}
+            className={"icon"}> ✖ </span>
             <div className="title">{course.name}</div>
             <div className="card-items">
                 {course.modules.map(module => {
@@ -35,18 +33,7 @@ const PopUp = (props) => {
         </div>
     }
 
-    return <div></div>
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        selectModule: (moduleId) =>{
-            dispatch(selectModuleAC(moduleId))
-        },
-        closingPopUp: () => {
-            dispatch(closingPopUpAC())
-        }
-    }
+    return <div> </div>
 }
 
 const mapStateToProps = (state) => {
@@ -58,4 +45,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default  connect(mapStateToProps, mapDispatchToProps)(PopUp);
+export default  connect(mapStateToProps, {selectModule, closingPopUp})(PopUp);

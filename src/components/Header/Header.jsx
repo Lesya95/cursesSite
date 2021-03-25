@@ -3,14 +3,13 @@ import {connect} from "react-redux";
 import {updateSearchText} from "../../redux/course-reducer";
 
 const Header = (props) => {
-
     let searchElement = React.createRef();
 
     const onChangeInputSearch = () => {
-
         let text = searchElement.current.value;
         props.updateSearchText(text);
     }
+
     return <header className="App-header">
         <input onChange={onChangeInputSearch}
                ref={searchElement}

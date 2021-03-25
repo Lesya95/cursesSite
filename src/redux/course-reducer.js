@@ -75,12 +75,12 @@ const courseReducer = (state = initialSate, action) => {
 
 }
 
-export const selectCardAC = (id, activeId) => ({type: SELECT_CARD, id, activeId,});
-export const selectModuleAndCardAC = (moduleId, cardId, activeId) =>{
+export const selectCard = (id, activeId) => ({type: SELECT_CARD, id, activeId,});
+export const selectModuleAndCard = (moduleId, cardId, activeId) =>{
     return {type: SELECT_MODULE_AND_CARD, moduleId, cardId, activeId};
 };
-export const selectModuleAC = (moduleId) => ({type: SELECT_MODULE, moduleId});
-export const closingPopUpAC = () => ({type: CLOSING_POP_UP});
+export const selectModule = (moduleId) => ({type: SELECT_MODULE, moduleId});
+export const closingPopUp = () => ({type: CLOSING_POP_UP});
 export const updateSearchText = (text) => ({type: UPDATE_SEARCH_TEXT, text});
 export const setCoursesPage = (data) => ({type: SET_COURSES_PAGE, data});
 export const setIsLoading = (data) => ({type: SET_IS_LOADING, data});

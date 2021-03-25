@@ -8,28 +8,22 @@ import dataCourses from "./data.json"
 import {setCoursesPage, setIsLoading} from "./redux/course-reducer";
 import Loading from "./components/LoadingSkeleton/Loading";
 
-function App(props) {
+function App({isLoading, courses, setIsLoading, setCoursesPage,}) {
 
     useEffect(() => {
-
         const fetchData = async () => {
             try {
                 setTimeout(() => {
-                    props.setCoursesPage(dataCourses.courses)
-                    props.setIsLoading(false);
+                    setCoursesPage(dataCourses.courses)
+                    setIsLoading(false);
                 },2000);
 
-            } catch (error) {
-
-            }
+            } catch (error) {console.log(error)}
         }
-        if(props.courses.length === 0){
-            fetchData();
-        };
-
+        if(courses.length === 0){fetchData()};
     }, [])
 
-    if(props.isLoading){
+    if(isLoading){
         return <Loading/>
     }
 
@@ -53,4 +47,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {setIsLoading, setCoursesPage})(App);
+export default connect(mapStateToProps,
+    {setIsLoading, setCoursesPage})(App);
